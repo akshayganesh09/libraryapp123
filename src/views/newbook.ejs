@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <title><%=title%></title>
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="login-box">
+      <form action="#" onsubmit="return validation()">
+        <h3>_Add a Book_</h3>
+    
+        <%for(i=0;i<newbook.length;i++){%>
+        <div class="textbox">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          
+            <<%=newbook[i].type%> type="<%=newbook[i].input%>" placeholder="<%=newbook[i].value%>" name="<%=newbook[i].assign%>" id="<%=newbook[i].assign%>">
+
+              <!-- <span id="username" class="text-danger"></span> -->
+             
+        </div>
+        <%}%> <h5>add an image</h5>
+        <br>
+        <input type="submit" name="submit" value="submit" class="btn btn-success">
+      </form>
+    </div>
+    
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
